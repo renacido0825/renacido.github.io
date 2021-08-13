@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja"5>
+<head>
+	<meta charset="utf-8">
+<style>
+	body{
+		margin : 0;
+		}
+	#menu_list{
+		font-family : monospace;
+		font-size : 20px;
+		width:300px;
+		height:400px;
+		background:#ccc;
+		margin:0;
+		margin-left:auto;
+		padding-top : 100px;
+		transition: 0.5s;
+	}
+	#menu_list > li{
+		list-style: none;
+		line-height : 60px;
+		margin-left : 80px;
+	}
+	#menu_list.hidden{
+		transform : translate(400px,0);	
+	}
+	#menu_box{
+		position : fixed;
+		left:auto;
+		top:0;
+		right:0;
+		padding : 10px;
+		margin:10px 10px 0 0;
+		width : 50px;
+		height: 50px;
+		border : 2px solid #888888;
+		border-radius : 5px;
+		z-index:1;
+		background:white;
+	}
+	.menu_line{
+		display:block;
+		width : 40px;
+		margin: 0 auto;
+		border-bottom : 4px solid #888888;
+		box-sizing : border-box;
+		position:relative;
+		transition : 0.5s;
+		border-radius:5px;
+	}
+	#line_1{
+		top : 10%;
+	}
+	#line_2{
+		top : 38%;
+	}
+	#line_3{
+		top : 68%;
+	}
+	#line_1.click{
+		top:44%;
+		transform : rotate(45deg);
+	}
+	#line_2.click{
+		opacity : 0;
+	}
+	#line_3.click{
+		top:30%;
+		transform : rotate(-45deg);
+	}
+</style>
+</head>
+<body>
+<ul id="menu_list" class="hidden">
+	<li>ボボンガ</li>
+	<li>魔法戦士</li>
+	<li>なーな</li>
+</ul>
+<div id="menu_box">
+	<span id="line_1" class="menu_line"></span>
+	<span id="line_2" class="menu_line"></span>
+	<span id="line_3" class="menu_line"></span>
+</div>
+<script>
+	const $menu_box = document.querySelector("#menu_box");
+	const $line_1 = document.querySelector("#line_1");
+	const $line_2 = document.querySelector("#line_2");
+	const $line_3 = document.querySelector("#line_3");
+	const $menu_list = document.querySelector("#menu_list");
+	
+	$menu_box.addEventListener("click",()=>{
+		$line_1.classList.toggle("click");
+		$line_2.classList.toggle("click");
+		$line_3.classList.toggle("click");
+		$menu_list.classList.toggle("hidden");
+	});
+</script>
+</body>
+</html>
