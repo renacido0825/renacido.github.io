@@ -18,7 +18,8 @@
 		font-size:30px;
 	}
 	#menu{
-		font-size:150%;
+		font-size:120%;
+		margin-left:-30px;
 	}
 	select,input{
 		font-size:100%;
@@ -41,9 +42,7 @@
 	}
 	input{
 		width : 150px;
-	}
-	#dw_data{
-		margin-left:13px;
+
 	}
 	
 	
@@ -53,7 +52,7 @@
 	<h1>簡易扉重量計算ツール</h1>
 	<section id="menu">
 		<ul>
-			<li id="door_type"><label>扉の種類
+			<li id="door_type"><label>扉の種類<br>
 				<select id="door_type_select">
 					<option value="slim32">スリムタイトドア32                            </option>
 					<option value="slim40">スリムタイトドア40                            </option>
@@ -64,7 +63,7 @@
 					<option value="partition">パーティションドア                             </option>
 				</select></label>
 			</li>
-			<li id="slim32_list" class="hidden"><label>スリムタイトドア32→フレームの素材/ガラスの厚さ
+			<li id="slim32_list" class="hidden"><label>スリムタイトドア32→フレームの素材/ガラスの厚さ<br>
 				<select id="slim32_frame_select">
 					<option value="al">アルミ</option>
 					<option value="st">ステンレス</option>
@@ -76,7 +75,7 @@
 					<option value="12">12mm</option>
 				</select></label>
 			</li>
-			<li id="slim40_list" class="hidden"><label>スリムタイトドア40→フレームの素材/ガラスの厚さ
+			<li id="slim40_list" class="hidden"><label>スリムタイトドア40→フレームの素材/ガラスの厚さ<br>
 				<select id="slim40_frame_select">
 					<option value="al">アルミ</option>
 					<option value="st">ステンレス</option>
@@ -88,29 +87,29 @@
 					<option value="12">12mm</option>
 				</select></label>
 			</li>
-			<li id="flush_list" class="hidden"><label>ステンレス・スチールフラッシュドア→扉の厚さ
+			<li id="flush_list" class="hidden"><label>ステンレス・スチールフラッシュドア→扉の厚さ<br>
 				<select id="flush_t_select">
 					<option value="38">40mm</option>
 					<option value="39">50mm</option>
 					<option value="40">60mm</option> 
 				</select></label>
 			</li>
-			<li id="al_frame_list" class="hidden"><label>アルミ框ドア→硝子の厚さ
+			<li id="al_frame_list" class="hidden"><label>アルミ框ドア→硝子の厚さ<br>
 				<select id="al_frame_select">
 					<option value="21">6mm</option>
 					<option value="25">8mm</option>
 					<option value="29">10mm</option>
 				</select></label>
 			</li>
-			<li id="st_frame_list" class="hidden"><label>ステンレス・スチール框ドア→硝子の厚さ
+			<li id="st_frame_list" class="hidden"><label>ステンレス・スチール框ドア→硝子の厚さ<br>
 				<select id="st_frame_select">
 					<option value="22">6mm</option>
 					<option value="28">8mm</option>
 					<option value="33">10mm</option>
 				</select></label>
 			</li>
-			<li id="dw_list"><label>ドアの幅/DW  <input type="number" id="dw_data">(m)</label></li>
-			<li id="dh_list"><label>ドアの高さ/DH <input type="number" id="dh_data">(m)</label></li>
+			<li id="dw_list"><label>ドアの幅/DW  <br><input type="number" id="dw_data">(m)</label></li>
+			<li id="dh_list"><label>ドアの高さ/DH <br><input type="number" id="dh_data">(m)</label></li>
 		</ul>
 	</section>
 	<section id="calc_space">
